@@ -1,0 +1,58 @@
+﻿@model IEnumerable<MVCLast.Models.Sach>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Masach)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tensach)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tacgia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nhaxuatban)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Namxb)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Masach)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tensach)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tacgia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nhaxuatban)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Namxb)
+        </td>
+        <td>
+            <a href="~/Sach/edit/@item.Masach">content</a>|
+            <a href="~/Sach/detail/@item.Masach">content</a> |
+            <a href="~/Sach/delete/@item.Masach">content</a>
+        </td>
+    </tr>
+}
+
+</table>

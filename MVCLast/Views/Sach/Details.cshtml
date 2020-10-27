@@ -1,0 +1,59 @@
+﻿@model MVCLast.Models.Sach
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Sach</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Masach)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Masach)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tensach)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tensach)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tacgia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tacgia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nhaxuatban)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nhaxuatban)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Namxb)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Namxb)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a href="#">Xóa</a>
+</p>
